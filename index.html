@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>For Harshali 💖</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body{
+  margin:0;
+  font-family:'Georgia', serif;
+  background: linear-gradient(to right,#ffe6f0,#fff0f5);
+  text-align:center;
+  overflow-x:hidden;
+  color:#4b0033;
+}
+
+/* HERO */
+.hero{
+  position:relative;
+  height:85vh;
+  background:url('https://i.postimg.cc/m2z8Pry1/626cacd3-7503-4cc7-9fbf-712e22ef2a08.jpg') no-repeat center center;
+  background-size:cover;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.overlay{
+  background:rgba(0,0,0,0.45);
+  padding:30px 40px;
+  border-radius:20px;
+  color:white;
+  backdrop-filter:blur(5px);
+}
+
+.overlay h1{
+  font-size:50px;
+  margin:0;
+  animation:heartbeat 1.5s infinite;
+}
+
+@keyframes heartbeat{
+  0%,100%{transform:scale(1);}
+  50%{transform:scale(1.1);}
+}
+
+.overlay p{
+  font-size:20px;
+  margin-top:10px;
+}
+
+/* GALLERY */
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:20px;
+  padding:60px 20px;
+}
+
+.gallery img{
+  width:100%;
+  border-radius:20px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.3);
+  transition:0.4s;
+}
+
+.gallery img:hover{
+  transform:scale(1.08);
+  box-shadow:0 15px 35px rgba(0,0,0,0.5);
+}
+
+/* MESSAGE */
+.message{
+  padding:40px 20px;
+  font-size:20px;
+  max-width:700px;
+  margin:auto;
+}
+
+button{
+  padding:14px 30px;
+  border:none;
+  background:#ff4da6;
+  color:white;
+  border-radius:30px;
+  font-size:18px;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+button:hover{
+  background:#ff1a75;
+  transform:scale(1.1);
+}
+
+/* MODAL */
+.modal{
+  display:none;
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.6);
+  justify-content:center;
+  align-items:center;
+}
+
+.modal-content{
+  background:#fff0f5;
+  padding:40px;
+  border-radius:20px;
+  font-size:22px;
+  animation:pop 0.5s ease;
+}
+
+@keyframes pop{
+  0%{transform:scale(0.5);opacity:0;}
+  100%{transform:scale(1);opacity:1;}
+}
+
+/* FLOATING HEARTS */
+.heart{
+  position:absolute;
+  font-size:20px;
+  animation:float 5s linear infinite;
+  color:#ff4da6;
+}
+
+@keyframes float{
+  0%{transform:translateY(0);opacity:1;}
+  100%{transform:translateY(-600px);opacity:0;}
+}
+
+footer{
+  padding:15px;
+  background:#ff4da6;
+  color:white;
+  margin-top:30px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="overlay">
+    <h1>Harshali 💖</h1>
+    <p>You are my forever, my happiness, and my sweetest blessing.</p>
+  </div>
+</div>
+
+<!-- GALLERY -->
+<div class="gallery">
+  <img src="https://i.postimg.cc/m2z8Pry1/626cacd3-7503-4cc7-9fbf-712e22ef2a08.jpg">
+  <img src="https://i.postimg.cc/3J4nkwFN/00f06fd3-88fb-4818-af80-504a7108e777.jpg">
+  <img src="https://i.postimg.cc/J4DPsh5B/b9b5a1e9-7dc9-4231-a1f6-a5017e509055.jpg">
+  <img src="https://i.postimg.cc/L40x4PL4/c21b04bc-6f1d-4e7c-9e24-d38824dcbc76.jpg">
+  <img src="https://i.postimg.cc/HWP6WMX5/bc5cc574-7078-4c68-88f4-947111237242.jpg">
+</div>
+
+<!-- MESSAGE -->
+<div class="message">
+  Every heartbeat whispers your name, Harshali 💕  
+  <br><br>
+  <button onclick="showLove()">Tap for Love</button>
+</div>
+
+<footer>Made with Love — Rohan 💖</footer>
+
+<!-- MODAL -->
+<div id="loveModal" class="modal">
+  <div class="modal-content">
+    💖 Harshali, you are my world, my smile, my everything! 💖
+  </div>
+</div>
+
+<script>
+function showLove(){
+  document.getElementById("loveModal").style.display="flex";
+  setTimeout(()=>{
+    document.getElementById("loveModal").style.display="none";
+  },2500);
+}
+
+function createHeart(){
+  const heart=document.createElement("div");
+  heart.className="heart";
+  heart.innerHTML="💖";
+  heart.style.left=Math.random()*window.innerWidth+"px";
+  heart.style.fontSize=(15+Math.random()*20)+"px";
+  heart.style.top="100%";
+  document.body.appendChild(heart);
+  setTimeout(()=>{heart.remove();},5000);
+}
+
+setInterval(createHeart,500);
+</script>
+
+</body>
+</html>
