@@ -15,19 +15,22 @@ body{
   color:#4b0033;
 }
 
-/* HERO */
+/* HERO SECTION */
 .hero{
   position:relative;
   height:85vh;
   background:url('https://i.postimg.cc/m2z8Pry1/626cacd3-7503-4cc7-9fbf-712e22ef2a08.jpg') no-repeat center center;
-  background-size:cover;
+  background-size:80%;   /* Image smaller */
+  background-repeat:no-repeat;
+  background-color:#000; /* Black background behind image */
   display:flex;
   align-items:center;
   justify-content:center;
 }
 
+/* Overlay */
 .overlay{
-  background:rgba(0,0,0,0.45);
+  background:rgba(0,0,0,0.5);
   padding:30px 40px;
   border-radius:20px;
   color:white;
@@ -168,7 +171,7 @@ footer{
   <button onclick="showLove()">Tap for Love</button>
 </div>
 
-<footer>Made with Love — Rohan 💖</footer>
+<footer>Made with Love — Purab 💖</footer>
 
 <!-- MODAL -->
 <div id="loveModal" class="modal">
